@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ticketprice.css">
+</head>
+<body>
+    <div class="Parking">
+            <h2>Brundha Parking Lot</h2>
+            <img src="brunda.jpeg" alt=""><br>
+            <select name="" id="input">
+                <option value="Rs.0"></option>
+                <option value="Rs.20">Less than 1hr</option>
+                <option value="Rs.40">1hr to 2hrs</option>
+                <option value="Rs.60">2hrs to 3hrs</option>
+                <option value="Rs.80">3hrs to 4hrs</option>
+                <option value="Rs.100">greater than 4hrs</option>
+            </select><br><br>
+            
+            <button type="button">Click here</button>
+            <h1 id="output"></h1>
+    </div>
+    <script>
+        let button=document.querySelector("button")
+        button.addEventListener('click',display)
+        function display(){
+            let output=document.querySelector("#output")
+                let input=document.querySelector("#input")
+                let output1=input.options[input.selectedIndex].value
+                output.innerHTML=output1
+            
+        }
+
+        
+       
+       
+        
+
+    </script>
+
+</body>
+</html>
